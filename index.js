@@ -3,7 +3,7 @@ import path from 'path'
 import fs from 'fs-extra'
 import chalk from 'chalk'
 import { fileURLToPath } from 'node:url'
-import { validatePkgName, install, validateDir, getOptions } from './utils/tools.js'
+import { validateProjectName, install, validateDir, getOptions } from './utils/tools.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -13,7 +13,7 @@ async function main() {
   const projectDir = path.resolve(projectName.startsWith('@') ? projectName.split('/')[1] : projectName)
 
   // 验证项目名是否正确
-  await validatePkgName(projectName)
+  await validateProjectName(projectName)
 
   // 验证项目目录是否存在
   await validateDir(projectDir)

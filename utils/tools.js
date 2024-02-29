@@ -5,7 +5,7 @@ import prompts from 'prompts'
 import fs from 'fs-extra'
 import path from 'path'
 
-export function validatePkgName (name) {
+export function validateProjectName (name) {
   const validateResult = validate(name)
   if (!validateResult.validForNewPackages) {
     console.error(
