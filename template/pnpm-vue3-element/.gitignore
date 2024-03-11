@@ -5,6 +5,7 @@ components.d.ts
 .eslintrc-auto-import.json
 .env
 .vscode
+.idea
 
 # Logs
 logs
