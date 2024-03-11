@@ -1,3 +1,10 @@
+# Auto Import
+ignore
+auto-imports.d.ts
+components.d.ts
+.eslintrc-auto-import.json
+.env
+
 # Logs
 logs
 *.log

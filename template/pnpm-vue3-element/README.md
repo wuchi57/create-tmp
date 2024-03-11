@@ -1,7 +1,17 @@
 # Vue 3 + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Recommended IDE Setup
+1. 配置 @ 别名、自动打开浏览器、代理
+2. 集成 sass: pnpm add sass -D
+3. 集成 element、自动导入、css前缀、代码压缩、SVGIcon 组件
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+```shell
+pnpm add element-plus && pnpm add -D unplugin-vue-components unplugin-auto-import unplugin-icons @element-plus/icons-vue vite-plugin-svg-icons autoprefixer vite-plugin-compression
+```
+
+
+## 运行
+```shell 
+pnpm i && pnpm run dev
+```
