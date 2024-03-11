@@ -35,6 +35,11 @@ pnpm add -D unplugin-vue-components unplugin-auto-import
 pnpm add -D @iconify/vue normalize.css
 ```
 
+7.添加 eslint、prettier配置
+```shell
+pnpm add -D eslint eslint-plugin-vue @vue/eslint-config-prettier eslint-config-prettier eslint-plugin-prettier prettier
+```
+
 ## 运行
 
 ```shell
