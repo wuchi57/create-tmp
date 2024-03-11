@@ -3,8 +3,6 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import Icons from 'unplugin-icons/vite'
-import IconsResolver from 'unplugin-icons/resolver'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import autoprefixer from 'autoprefixer'
@@ -15,30 +13,19 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports: ['vue', 'vue-router', 'pinia'],
+      imports: ['vue'],
       resolvers: [
         // 导入 element-plus 相关函数
         ElementPlusResolver(),
       ],
-      eslintrc: {
-        enabled: true,
-        filepath: resolve(__dirname, 'ignore/.eslintrc-auto-import.json'),
-      },
       dts: resolve(__dirname, 'ignore/auto-imports.d.ts'),
     }),
     Components({
       resolvers: [
         // 自动注册组件
         ElementPlusResolver(),
-        IconsResolver({
-          prefix: 'icon',
-          enabledCollections: ['bi', 'ep', 'octicon'],
-        }),
       ],
       dts: resolve(__dirname, 'ignore/components.d.ts'),
-    }),
-    Icons({
-      autoInstall: true,
     }),
     createSvgIconsPlugin({
       iconDirs: [resolve(__dirname, 'src/assets/svg')],

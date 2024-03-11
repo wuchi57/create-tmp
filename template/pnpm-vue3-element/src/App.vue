@@ -2,6 +2,11 @@
   <div class="app">
     <SvgIcon name="ai" style="font-size: 64px;"/>
     <h2>Hello</h2>
+    <div class="icons-set" style="font-size: 3rem;">
+      <Icon icon="mdi:alarm-light-outline" />
+      <Icon icon="ion:battery-charging" />
+      <Icon icon="ic:baseline-30fps" />
+    </div>
   </div>
 </template>
 
