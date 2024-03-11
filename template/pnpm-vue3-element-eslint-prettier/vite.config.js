@@ -18,6 +18,10 @@ export default defineConfig({
         // 导入 element-plus 相关函数
         ElementPlusResolver(),
       ],
+      eslintrc: {
+        enabled: true,
+        filepath: resolve(__dirname, 'ignore/.eslintrc-auto-import.json'),
+      },
       dts: resolve(__dirname, 'ignore/auto-imports.d.ts'),
     }),
     Components({
