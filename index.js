@@ -34,7 +34,7 @@ async function main() {
   // 输出信息
   console.log(`\n${chalk.green('✔')} Success! Created ${chalk.cyan(projectName)} at ${chalk.cyan(projectDir)}`)
   console.log('\nDone. Now run: \n')
-  console.log(`    cd ${projectDir}`)
+  console.log(`    cd ${projectName}`)
   console.log(`    ${packageManager} run dev\n`)
 }
 
